@@ -26,6 +26,10 @@ Tested on Windows only.
 
 ## How to run
 
+For Windows 64, there are precompiled binaries [here](https://github.com/haroflow/go-obs-joystick-overlay/releases).
+
+If you want to build it yourself, follow these steps:
+
 - Clone this repository:
   ```
   git clone github.com/haroflow/go-obs-joystick-overlay
@@ -34,6 +38,18 @@ Tested on Windows only.
   ```
   go run .
   ```
+
+## Using with OBS
+
+- Connect your Logitech G920.
+- Run go-obs-joystick-overlay, see `How to run`.
+- Open OBS, add a new `Game Capture` Source:
+
+  ![image](https://github.com/haroflow/go-obs-joystick-overlay/assets/4776931/8cbba15a-9ceb-4c88-8bb5-7f3cff9e5f97)
+  
+- Set `Mode: Capture specific window`, `Window: go-obs-joystick-overlay.exe` and enable `Allow transparency`:
+
+  ![image](https://github.com/haroflow/go-obs-joystick-overlay/assets/4776931/510c9a3c-eea8-453f-b10f-ddfeb5fdb57c)
 
 ## How to build
 
@@ -49,15 +65,3 @@ Tested on Windows only.
   ```
   go build -ldflags "-H=windowsgui" .
   ```
-  
-## Using on OBS
-
-- Connect your Logitech G920.
-- Run go-obs-joystick-overlay, see `How to run`.
-- Open OBS, add a new `Game Capture` Source:
-
-  ![image](https://github.com/haroflow/go-obs-joystick-overlay/assets/4776931/8cbba15a-9ceb-4c88-8bb5-7f3cff9e5f97)
-  
-- Set `Mode: Capture specific window`, `Window: go-obs-joystick-overlay.exe` and enable `Allow transparency`:
-
-  ![image](https://github.com/haroflow/go-obs-joystick-overlay/assets/4776931/510c9a3c-eea8-453f-b10f-ddfeb5fdb57c)
